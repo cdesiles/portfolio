@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  color: #25221d;
+  width: 80%;
+  margin: 4em 10% 5em 10%;
+
+  /**
+    * A very nice spot for rock climbing, the route is quiet easy and ends with a magestic 50m abseiling.
+    * Coordinates: 44°50′31″N 05°33′09″
+    * This picture I've taken has been dithered with 4 colours thanks to The Gimp.
+  */
+  background: #dcdfe3 url("../img/mont-aiguille-1600-dither4.png") no-repeat
+    center center fixed;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2em;
+  height: 125px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3);
+
+  background-image: url("../img/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #348656;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+header h2 {
+  margin: 0.3em 0 0 0;
+  font-size: 1.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+}
+
+header img#photo {
+  height: 128px;
+  width: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  color: #0a4e96;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#copyright {
+  text-align: center;
+}
+
+section#main h2:first-child {
+  margin-top: 0px;
+}
+
+section {
+  background-color: #ccc;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  /*position: relative;*/
+}
+
+section p {
+  margin-left: 10px;
+  background: white;
+  border-radius: 5px;
+  padding: 5px 8px;
+  box-shadow: 1px 1px 1px #888;
+}
+
+section h2 {
+  color: #444;
+  font-weight: normal;
+}
+
+footer {
+  padding: 15px 15px 15px 15px;
+  background-color: #eee;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9em;
+  position: relative;
+  color: #999;
+}
+
+footer a {
+  color: #43658a;
+}
+
+body > canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#networking {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 26px);
+}
+#networking > a {
+  padding: 10px 0px 10px 0px;
+  min-width: 80px;
+  width: 100%;
+}
+#networking > a > * {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}

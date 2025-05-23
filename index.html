@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Clément Désiles - Engineering Manager</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Clément Désiles" />
+    <meta
+      name="description"
+      content="My portfolio page, presenting my CV and some links"
+    />
+    <meta
+      name="keywords"
+      content="Clément Désiles, homepage, portfolio, cv, resume, page perso"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="icons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="icons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="icons/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-info">
+        <h1>Clément Désiles</h1>
+        <h2>Engineering Manager</h2>
+      </div>
+      <img
+        id="photo"
+        src="img/portrait.jpg"
+        width="128"
+        alt="Clément Désiles' smiling face"
+      />
+    </header>
+    <section id="main">
+      <h2>Curriculum Vitae</h2>
+      <p>
+        <a href="./cv_fr.html" title="Mon CV en Français">En Français</a>
+        (<a
+          href="./pdf/CV - Clément Désiles - Engineering Manager - français - 2025.pdf"
+          title="fichier PDF"
+          >fichier PDF</a
+        >)
+      </p>
+      <p>
+        <a href="./cv_en.html" title="My resume in English">In English</a>
+        (<a
+          href="./pdf/CV - Clément Désiles - Engineering Manager - english - 2025.pdf"
+          title="PDF file"
+          >PDF file</a
+        >)
+      </p>
+
+      <h2>Get in touch with me</h2>
+      <!-- prettier-ignore -->
+      <p id="networking">
+        <a href="mailto:jobs@clementdesiles.fr" title="send me an email">
+          <img src="img/email.svg" alt="email" height="64" width="64" />
+          <span>email me</span>
+        </a>
+        <a href="./vcard.vcf" title="download my vCard">
+          <img src="img/vcard.svg" alt="vCard" height="64" width="64" />
+          <span>my vCard</span>
+        </a>
+        <a href="https://www.linkedin.com/in/clementdesiles" title="my LinkedIn profile">
+          <img src="img/linkedin.svg" alt="LinkedIn" height="64" width="64" />
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/jokesterfr" title="my GitHub profile">
+          <img src="img/github.svg" alt="Github" height="64" width="64" />
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.npmjs.com/~jokesterfr" title="my npm profile">
+          <img src="img/npm.svg" alt="Npm" height="64" width="64" />
+          <span>npm</span>
+        </a>
+        <a href="https://stackoverflow.com/users/2161580/jokesterfr" title="my Stack Overflow profile">
+          <img src="img/stack-overflow.svg" alt="Stack Overflow" height="64" width="64" />
+          <span>Stack Overflow</span>
+        </a>
+        <a href="https://hub.docker.com/u/jokesterfr" title="my Docker hub profile">
+          <img src="img/docker.svg" alt="Docker hub" height="64" width="64" />
+          <span>Docker hub</span>
+        </a>
+      </p>
+    </section>
+    <footer>
+      <p id="copyright">
+        <!-- Prononciate [klemɑ̃ dezil] -->
+        © Copyright - Clément Désiles - 2025
+      </p>
+    </footer>
+    <script>
+      // nyan cat easter-egg!
+      // see https://github.com/jimpo/nyancat
+      const nyan = (function () {
+        let STEP_SIZE = 5;
+        let body,
+          img,
+          targetX,
+          targetY,
+          mouseX = 0,
+          mouseY = 0;
+
+        function createImgElement() {
+          img = document.createElement("img");
+          img.src = "img/nyancat.gif";
+          img.style["width"] = "200px";
+          img.style["z-index"] = "100";
+          img.style["position"] = "fixed";
+          img.style["left"] = 0;
+          img.style["top"] = 0;
+        }
+
+        function randomWalk() {
+          setRandomTarget();
+          setInterval(() => {
+            if (atTarget()) {
+              setRandomTarget();
+            }
+            stepTowardsTarget();
+          }, 50);
+        }
+
+        function speed() {
+          let bonus = 0;
+          let dx = mouseX - posX();
+          let dy = mouseY - posY();
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 500) {
+            bonus = (500 - dist) / 10;
+          }
+          return STEP_SIZE + bonus;
+        }
+
+        function atTarget() {
+          return posX() == targetX && posY() == targetY;
+        }
+
+        function setRandomTarget() {
+          targetX = Math.floor(Math.random() * window.innerWidth);
+          targetY = Math.floor(Math.random() * window.innerHeight);
+        }
+
+        function posX() {
+          return parseFloat(img.style["left"]);
+        }
+
+        function posY() {
+          return parseFloat(img.style["top"]);
+        }
+
+        function stepTowardsTarget() {
+          var dx = targetX - posX();
+          var dy = targetY - posY();
+          var d = Math.sqrt(dx * dx + dy * dy);
+          var step = speed() / 4;
+          if (d <= step) {
+            img.style["left"] = targetX + "px";
+            img.style["top"] = targetY + "px";
+          } else {
+            img.style["left"] = posX() + (dx * step) / d + "px";
+            img.style["top"] = posY() + (dy * step) / d + "px";
+          }
+        }
+
+        function setMouseListener() {
+          window.addEventListener("mousemove", function () {
+            mouseX = window.event.clientX;
+            mouseY = window.event.clientY;
+          });
+        }
+
+        return function () {
+          createImgElement();
+          body = document.getElementsByTagName("body")[0];
+          body.appendChild(img);
+          setMouseListener();
+          randomWalk();
+        };
+      })();
+
+      // trigger
+      let k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+      let n = 0;
+      document.addEventListener("keydown", (event) => {
+        if (event.keyCode !== k[n++]) {
+          n = 0;
+          return;
+        }
+        if (n === k.length) {
+          nyan();
+          n = 0;
+          return false;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 300;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+@media print {
+  body {
+    font-size: 0.8em;
+  }
+}
+
+header {
+  padding: 2em 6.5vw 1.2em 6.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media print {
+  header {
+    padding: 2em 4vw 1.2em 4vw;
+  }
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  font-family: "Noto Serif", serif;
+}
+
+.job-title {
+  font-weight: 600;
+  color: #2a8c4a;
+  font-size: 1.4em;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.contact {
+  margin-top: 16px;
+  font-size: 0.95em;
+}
+
+.contact p {
+  margin: 4px 0;
+}
+
+article {
+  padding: 0 7vw 0 7vw;
+}
+
+@media print {
+  article {
+    padding: 0 5vw 0 5vw;
+  }
+}
+
+.top-section p {
+  font-size: 1.1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4vw;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95em;
+}
+
+h2 {
+  font-size: 22.4px;
+  font-weight: 400;
+  color: #2a8c4a;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.1em;
+}
+
+ul li::before {
+  content: "•";
+  font-size: 0.7em;
+  color: black;
+  display: inline-block;
+  width: 1em;
+  margin-left: -0.9em;
+  position: relative;
+  top: -0.1em;
+}
+
+ul,
+p {
+  margin: 6px 0;
+}
+
+.languages ul,
+.interests ul {
+  padding-left: 0.5em;
+}
+
+.education li,
+.languages li {
+  min-width: 30vw;
+}
+
+.languages li::before,
+.interests li::before {
+  display: none;
+}
+
+.experience h3 {
+  margin: 1.5em 0 0.2em 0;
+  font-weight: 600;
+}
+
+.experience span {
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+a {
+  color: #2a8c4a;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5em 5vw;
+  }
+
+  .photo {
+    width: 60px;
+    height: 60px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  .job-title {
+    font-size: 1em;
+  }
+
+  .contact {
+    margin-top: 12px;
+    font-size: 0.9em;
+  }
+
+  article {
+    padding: 0 5vw;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .education li,
+  .languages li {
+    min-width: 100%;
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  ul li::before {
+    top: 0;
+  }
+
+  .top-section p {
+    font-size: 1em;
+  }
+}

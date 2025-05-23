@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:4.0
+N:Désiles;Clément;;Mr;
+FN:Clément Désiles
+TITLE:Engineering Manager
+URL:https://clementdesiles.fr
+SOURCE;VALUE=uri:https://clementdesiles.fr/vcard.vcf
+PHOTO;VALUE=uri:https://clementdesiles.fr/img/portrait.jpg
+TEL;TYPE=cell;VALUE=uri:tel:+33-6-58-12-45-61
+EMAIL:jobs@clementdesiles.fr
+TZ:Europe/Paris
+GEO:geo:48.5824,7.7377
+CATEGORIES:Engineer, Manager, Open Source, Cloud computing
+UID:urn:uuid:72876d3b-68c7-4092-83e5-42cd0c10d910
+REV:2025-05-23T10:00:00Z
+END:VCARD
